@@ -29,3 +29,25 @@
       - There are two methods to implement to select and cancel the image in photo library
           1. imagePickerControllerDidCancel
           2. imagePickerController
+          
+- Custom View:
+    1. init(frame:): initial the view 
+    2. init(coder:): loading the view from the storyboard
+    3. Add Support for Interface Builder
+        - @IBDesignable : It can preview our custom view in mainstory board
+        - @IBInspectable : Let us inspect our attribute in attribute inspector. However, it cannot be changed by attribute inspecter
+        - Add property observer observes and responds to changes in property value by using **Didset** method
+- How do we implement **Rating Control** in this example ?
+   
+   Stackview -> RatingControlClass -> Set up Button -> Design button programmingly -> use **"Add Target"** to add click event
+- There are five different states in UIButton, we can set different image with different state
+    1. normal
+    2. highlighted
+    3. focused
+    4. selected
+    5. disabled
+    
+    We are going to choose the image for different states and change the image by **rattingButtonTapped**
+
+
+     
