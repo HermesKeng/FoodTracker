@@ -36,7 +36,8 @@
     3. Add Support for Interface Builder
         - @IBDesignable : It can preview our custom view in mainstory board
         - @IBInspectable : Let us inspect our attribute in attribute inspector. However, it cannot be changed by attribute inspecter
-        - Add property observer observes and responds to changes in property value by using **Didset** method
+        
+        - Add property observer observes and responds to changes in property value by using **Didset** method
 - How do we implement **Rating Control** in this example ?
    
    Stackview -> RatingControlClass -> Set up Button -> Design button programmingly -> use **"Add Target"** to add click event
