@@ -21,6 +21,12 @@ class MealViewController: UIViewController,UITextFieldDelegate,UIImagePickerCont
         //Handle the text field's user input through delegate callbacks
         mealTextField.delegate=self
         // Do any additional setup after loading the view, typically from a nib.
+        if let meal = meal{
+            navigationItem.title=meal.name
+            mealTextField.text=meal.name
+            photoImageView.image=meal.photo
+            ratingControl.rating=meal.rating
+        }
         updateSaveButtonState()
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
