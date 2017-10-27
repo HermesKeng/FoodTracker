@@ -65,10 +65,27 @@
       2. link it and set the outlet to the tablecell
       3. Create controller to load the initial data model
   3. How do we display the data ?
-    1. A data source
-    2. A delegate: it helps the tableView manage cell selection, row heights, and other aspects related to displaying the data
+      1. A data source
+      2. A delegate: it helps the tableView manage cell selection, row heights, and other aspects related to displaying the data
 
-      (The Controller implement both method)
+      (The Controller implements both method)
+      
+- UITableViewController: 
+  1. numberOfSections(in tableView: UITableView): To set up how many section in the cell
+  2. tableView(_ tableView: UITableView, numberOfRowsInSection section: Int): How many row should be create 
+  3. tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath): Configure and provide a cell to be display for a given row
+  4. dequeueReusableCell: The table tries to reuse the cells by this method
+  
+- Segue: We use segue to make one view transition to another.
+- Navigation Controller: We are going to put our TableViewController into navigation controller
+  - It manages transitions forward and backward between different view controllers.
+  - The set of view controllers managed by a particular navigation controller is called its navigation stack. (First one called root view controller)
+  - (Introdution Pic)
+  
+- What is navigation bar's name?
+  1. Navigation bars get their title from the view controller at the top of navigation stack
+  2. Each view controller has a navigationItem property
+- Push navigation is designed for a drill down interface
 
 
 
