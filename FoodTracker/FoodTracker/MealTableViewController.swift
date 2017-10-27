@@ -12,7 +12,13 @@ class MealTableViewController: UITableViewController {
     var meals=[Meal]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleMeals()
+        navigationItem.leftBarButtonItem = editButtonItem
+        
+        if let saveMeals = loadMeals(){
+            meals += saveMeals
+        }else{
+            loadSampleMeals()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,26 +81,31 @@ class MealTableViewController: UITableViewController {
                 tableView.insertRows(at: [newIndexPath], with: .automatic )
             }
         }
+        
+        saveMeals()
     }
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            meals.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
+            saveMeals()
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -141,5 +152,19 @@ class MealTableViewController: UITableViewController {
         }
     }
     
-
+    private func saveMeals(){
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path)
+        
+        if isSuccessfulSave{
+            os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
+        }else{
+            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+        }
+        
+    }
+    
+    private func loadMeals() ->[Meal]?{
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Meal.ArchiveURL.path ) as? [Meal]
+    }
 }
