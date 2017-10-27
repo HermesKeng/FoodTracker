@@ -50,5 +50,26 @@
     
     We are going to choose the image for different states and change the image by **rattingButtonTapped**
 
+- Next, We are going to make a class to store the meal cell.
+    - There are three variable in Meal Class,name, photo,and rating.
+    - When you make a class, it must have a init method to initialize it. Therefore, we use **init?** method to initialize it.
+    - In this method, **?** is used to return optional value to check if the option has a value.
+    
+- Guard statement : If it meet the condition, the code is going to run successfully. Otherwise, if the condition doesn't meet, the statement is going to else part to show the error message. 
+
+- Creating Another View : We need another view to display the meal list, setting up it to the initial view
+  1. UITableView designed specifically to display a scrolling list of items
+  2. UITableView Controller is designed to handle table-view relate logic 
+    - Step to build up UITableView Controller
+      1. Create the tablecell class to set up your custom cells
+      2. link it and set the outlet to the tablecell
+      3. Create controller to load the initial data model
+  3. How do we display the data ?
+    1. A data source
+    2. A delegate: it helps the tableView manage cell selection, row heights, and other aspects related to displaying the data
+
+      (The Controller implement both method)
+
+
 
      
