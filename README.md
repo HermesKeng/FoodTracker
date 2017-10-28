@@ -99,9 +99,15 @@
   - The operater unwraps the optional String returned by nameTextField.text. If the nameTextField.text is nil, the program is going to set up space string instead
 ---
 - Now we are going to edit and delete the item in meal cell list
- - Edit the meal
-   1. Pass the value what it tap
-   2. Store value
-   ![The step to implement edit cell in the meal list]
+  - Edit the meal
+    1. Pass the value what it tap
+    2. Store value
+    ![The step to implement edit cell in the meal list](https://github.com/HermesKeng/FoodTracker/blob/master/images/EditMeal.jpeg)
+     3. Cancel from the edit mode: We are going to implement a check that determines how the current scene was presented when the user taps the cancel button 
+        - If it was presented by **Add Button**, we use dismiss method in the dissmissViewController
+        - If it was presented by **Cell List**, we use popViewController in navigationController
+  - Delete the meal
+    1. implement delete method
+    2. tableView(forRowat: commit:)
 
      
