@@ -50,5 +50,43 @@
     
     We are going to choose the image for different states and change the image by **rattingButtonTapped**
 
+- Next, We are going to make a class to store the meal cell.
+    - There are three variable in Meal Class,name, photo,and rating.
+    - When you make a class, it must have a init method to initialize it. Therefore, we use **init?** method to initialize it.
+    - In this method, **?** is used to return optional value to check if the option has a value.
+    
+- Guard statement : If it meet the condition, the code is going to run successfully. Otherwise, if the condition doesn't meet, the statement is going to else part to show the error message. 
+
+- Creating Another View : We need another view to display the meal list, setting up it to the initial view
+  1. UITableView designed specifically to display a scrolling list of items
+  2. UITableView Controller is designed to handle table-view relate logic 
+    - Step to build up UITableView Controller
+      1. Create the tablecell class to set up your custom cells
+      2. link it and set the outlet to the tablecell
+      3. Create controller to load the initial data model
+  3. How do we display the data ?
+      1. A data source
+      2. A delegate: it helps the tableView manage cell selection, row heights, and other aspects related to displaying the data
+
+      (The Controller implements both method)
+      
+- UITableViewController: 
+  1. numberOfSections(in tableView: UITableView): To set up how many section in the cell
+  2. tableView(_ tableView: UITableView, numberOfRowsInSection section: Int): How many row should be create 
+  3. tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath): Configure and provide a cell to be display for a given row
+  4. dequeueReusableCell: The table tries to reuse the cells by this method
+  
+- Segue: We use segue to make one view transition to another.
+- Navigation Controller: We are going to put our TableViewController into navigation controller
+  - It manages transitions forward and backward between different view controllers.
+  - The set of view controllers managed by a particular navigation controller is called its navigation stack. (First one called root view controller)
+  - (Introdution Pic)
+  
+- What is navigation bar's name?
+  1. Navigation bars get their title from the view controller at the top of navigation stack
+  2. Each view controller has a navigationItem property
+- Push navigation is designed for a drill down interface
+
+
 
      
