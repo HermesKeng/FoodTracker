@@ -37,7 +37,8 @@
         - @IBDesignable : It can preview our custom view in mainstory board
         - @IBInspectable : Let us inspect our attribute in attribute inspector. However, it cannot be changed by attribute inspecter
         
-        - Add property observer observes and responds to changes in property value by using **Didset** method
+        - Add property observer observes and responds to changes in property value by using **Didset** method
+---
 - How do we implement **Rating Control** in this example ?
    
    Stackview -> RatingControlClass -> Set up Button -> Design button programmingly -> use **"Add Target"** to add click event
@@ -74,8 +75,8 @@
   1. numberOfSections(in tableView: UITableView): To set up how many section in the cell
   2. tableView(_ tableView: UITableView, numberOfRowsInSection section: Int): How many row should be create 
   3. tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath): Configure and provide a cell to be display for a given row
-  4. dequeueReusableCell: The table tries to reuse the cells by this method
-  
+  4. dequeueReusableCell: The table tries to reuse the cells by this method
+---
 - Segue: We use segue to make one view transition to another.
 - Navigation Controller: We are going to put our TableViewController into navigation controller
   - It manages transitions forward and backward between different view controllers.
@@ -95,6 +96,12 @@
   
 - Nil Coakescing Operater (??): You are going to see ```let name = mealTextField.text ?? ""``` in prepare method
   - The nil coakescing operator is used t return the value of an optional if the optional has a value or return a default value otherwise
-  - The operater unwraps the optional String returned by nameTextField.text. If the nameTextField.text is nil, the program is going to set up space string instead
+  - The operater unwraps the optional String returned by nameTextField.text. If the nameTextField.text is nil, the program is going to set up space string instead
+---
+- Now we are going to edit and delete the item in meal cell list
+ - Edit the meal
+   1. Pass the value what it tap
+   2. Store value
+   ![The step to implement edit cell in the meal list]
 
      
