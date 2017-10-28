@@ -114,9 +114,9 @@
 
 - Make data persistence to archive objects and other structures. We are going to use NSCoding. Object can be stored in the disk and retrieved at later time by NSCoding protocal
 - NSCoding is used to read & write data in the model
-  1. We are going to utilize the encoder in class to let it encode the data 
-  2. Set up the path to store the data
-  3. In Edit,Delete,Add method, we are going to create another method to save each change for cell and load data in initial method 
+   1. We are going to utilize the encoder in class to let it encode the data 
+   2. Set up the path to store the data
+   3. In Edit,Delete,Add method, we are going to create another method to save each change for cell and load data in initial method 
 
 
      
