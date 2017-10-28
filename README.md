@@ -79,14 +79,22 @@
 - Segue: We use segue to make one view transition to another.
 - Navigation Controller: We are going to put our TableViewController into navigation controller
   - It manages transitions forward and backward between different view controllers.
-  - The set of view controllers managed by a particular navigation controller is called its navigation stack. (First one called root view controller)
-  - (Introdution Pic)
-  
+  - The set of view controllers managed by a particular navigation controller is called its navigation stack. (First one called root view controller)
+![Navigation Bar & Table View Introduction](https://github.com/HermesKeng/FoodTracker/blob/master/images/Navbar_TableView.jpeg)
+  
 - What is navigation bar's name?
   1. Navigation bars get their title from the view controller at the top of navigation stack
   2. Each view controller has a navigationItem property
 - Push navigation is designed for a drill down interface
-
-
+- Unwind Segue: It provides a simple method for passing information to an earlier view controller.
+  1. The Unwind Segue traverses your navigation hierarchy to locate the destination view controller
+  2. The view controller that initiated the unwind segue is sent a prepare method, we can override it to pass data to destination
+      - prepare(for:sender:) : A segue gets triggered, it provides a place for you to add your own code that gets executed.Therefore, you can write the code to store data or do any necessory cleanup here
+  3. The destination unwind method is invoke
+  4. The view transition about source & destination
+  
+- Nil Coakescing Operater (??): You are going to see ```let name = mealTextField.text ?? ""``` in prepare method
+  - The nil coakescing operator is used t return the value of an optional if the optional has a value or return a default value otherwise
+  - The operater unwraps the optional String returned by nameTextField.text. If the nameTextField.text is nil, the program is going to set up space string instead
 
      
