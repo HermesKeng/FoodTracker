@@ -96,7 +96,7 @@
   
 - Nil Coakescing Operater (??): You are going to see ```let name = mealTextField.text ?? ""``` in prepare method
   - The nil coakescing operator is used t return the value of an optional if the optional has a value or return a default value otherwise
-  - The operater unwraps the optional String returned by nameTextField.text. If the nameTextField.text is nil, the program is going to set up space string instead
+  - The operater unwraps the optional String returned by nameTextField.text. If the nameTextField.text is nil, the program is going to set up space string instead
 ---
 - Now we are going to edit and delete the item in meal cell list
   - Edit the meal
